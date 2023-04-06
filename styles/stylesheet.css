@@ -31,7 +31,7 @@ body {
 .logo {
     position: relative;
     background-image: url("./../images/plant.avif");
-    width: 45%;
+    width: 50%;
     height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
@@ -67,7 +67,7 @@ body {
     align-items: center;
     justify-content: space-evenly;
     margin: 0; padding: 0;
-    top: 79%;
+    top: 78%;
     font: 1.5vh "robotoregular", monospace;
 }
 
