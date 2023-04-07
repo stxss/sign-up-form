@@ -23,33 +23,50 @@
             <h2>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <em>now</em> to get started.
                 <br><br>
             <h2>You <em>know</em> you want to.</h2>
-            <br><br>
         </div>
 
-        <form action="">
-            <label for="first_name">FIRST NAME</label>
-            <input type="text" name="user_first" id="first_name" value="Thor" required>
+        <form action="" id="acc-creation">
+            <h3>Let's do this!</h3>
+            <p>Required fields are marked by <span aria-label="required">*</span></p>
 
-            <label for="last_name">LAST NAME</label>
-            <input type="text" name="user_last" id="last_name" value="Odinson">
+            <div class="row">
+                <label for="first_name"><span>FIRST NAME </span><strong><span aria-label="required">*</span></strong>
+                    <input type="text" name="user_first" id="first_name" pattern="[A-Za-z]{1,32}" value="Thor" required>
+                </label>
 
-            <label for="email">E-MAIL</label>
-            <input type="email" name="user_mail" id="email" required>
+                <label for="last_name"><span>LAST NAME </span><strong><span aria-label="required">*</span></strong>
+                    <input type="text" name="user_last" id="last_name" pattern="[A-Za-z]{1,32}" value="Odinson" required>
+                </label>
+            </div>
 
-            <label for="phone">PHONE NUMBER</label>
-            <input type="tel" name="user_phone" id="phone">
+            <div class="row">
+                <label for="email">
+                    <span>E-MAIL </span><strong><span aria-label="required">*</span></strong>
+                    <input type="email" name="user_mail" id="email" placeholder="email@domain.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+                </label>
 
-            <label for="pw">PASSWORD</label>
-            <input type="password" name="user_pw" id="pw" required>
+                <label for="phone">PHONE NUMBER
+                    <input type="tel" name="user_phone" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" optional>
+                </label>
+            </div>
 
-            <label for="cpw">CONFIRM PASSWORD</label>
-            <input type="password" name="user_cpw" id="cpw" required>
+            <div class="row">
+                <label for="pw"><span>PASSWORD </span><strong><span aria-label="required">*</span></strong>
+                    <input type="password" name="user_pw" id="pw" required>
+                    <p id="pw-validation">Passwords do not match.</p>
+                </label>
 
-            <div class="button">
-                <button type="submit">Create account</button>
+                <label for="cpw"><span>CONFIRM PASSWORD </span><strong><span aria-label="required">*</span></strong>
+                    <input type="password" name="user_cpw" id="cpw" required>
+                </label>
             </div>
         </form>
-        <p>Already have an account? <a href="index.html"><strong>Log in</strong></a></p>
+        <div class="button">
+            <button form="acc-creation" type="submit">Create account</button>
+        </div>
+        <p class="acc-exist">Already have an account? <a href="https://www.theodinproject.com/sign_in"><strong>Log in</strong></a></p>
     </div>
+    <script src="script.js"></script>
 </body>
+
 </html>
