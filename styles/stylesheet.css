@@ -73,20 +73,120 @@ body {
 }
 
 .right-half {
+    display: flex;
     width: 100%;
     height: 100%;
+    flex-direction: column;
     font: 2vh Arial, monospace;
     background-color: #f9fafb;
 }
 
 .right-half .slogan {
-    padding: 0 4vw;
-    margin: 5vw;
+    margin: 10vh 0 2vh 75px;
+    padding-right: 300px;
 }
 
-.right-half form{
-    padding: 0;
-    margin: 0;
-    background-color: #ffffff;
+.right-half form {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    margin-top: 5%;
+    background-color: white;
     box-shadow: 0 3px 10px lightgrey;
+}
+
+
+.right-half h3,
+.right-half form p {
+    display: block;
+    margin-left: 50px;
+    margin-bottom: 10px;
+}
+
+.right-half h3 {
+    font-size: 2.3vh;
+}
+
+.right-half form p {
+    font-size: 1.1vh;
+    color: #c96161;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+label, input {
+    display: block;
+    padding: 5px;
+}
+
+label {
+    width: 15vw;
+    font-size: 1.2vh;
+    margin: 0 45px 10px;
+}
+
+input {
+    appearance: none;
+    line-height: 2vh;
+    margin-top: 5px;
+    width: 200px;
+    border: 1px solid #E5E7EB;
+    border-radius: 5px;
+}
+
+input:focus {
+    outline: none;
+}
+
+input:focus:invalid,
+input:optional:invalid,
+.error {
+    border: 1px solid red;
+    box-shadow: 0 3px 5px pink;
+}
+
+input:not(input[type="password"]):required:valid,
+.valid {
+    border: 1px solid green;
+    box-shadow: 0 3px 5px rgb(112, 167, 112);
+}
+
+button {
+    appearance: none;
+    margin: 35px 25px 15px 65px;
+    padding: 20px;
+    border: none;
+    border-radius: 5px;
+    width: 15vw;
+    line-height: 2vh;
+    font-size: 2vh;
+    font-weight: bold;
+    background-color: #596D48;
+    color: white;
+}
+
+button:hover {
+    background-color: #718a5c;
+}
+
+button:active {
+    background-color: #3e4d33;
+    box-shadow: -5px -5px 15px rgb(180, 179, 179),
+        inset 0 0 5px black;
+}
+
+#pw-validation {
+    display: block;
+    visibility: hidden;
+    color: red;
+    font-weight: bold;
+    margin: 3px 0;
+}
+
+.acc-exist {
+    margin: 35px 25px 15px 65px;
 }
